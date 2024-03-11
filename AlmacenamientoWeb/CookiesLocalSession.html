@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+
+<body>
+
+    <button id="crear">Crear</button>
+    <button id="mostrar">Mostrar</button>
+    <button id="modificar">Modificar</button>
+    <button id="eliminar">Eliminar</button>
+
+    <script>
+        document.getElementById("crear").addEventListener("click", crear);
+        document.getElementById("mostrar").addEventListener("click", mostrar);
+        document.getElementById("modificar").addEventListener("click", modificar);
+        document.getElementById("eliminar").addEventListener("click", eliminar);
+
+         //Almacenar con Cookies
+         //expires=Thu, 31 Dec 2024 12:00:00 UTC; path=/
+         function crear(){
+            document.cookie = "usuario=pedro; max-age=10";
+        }
+
+        function mostrar(){
+            alert(document.cookie);
+        }
+
+        function modificar(){
+            document.cookie = "usuario=pedro123";
+        }   
+
+        function eliminar(){
+            document.cookie = "usurio=pedro; max-age=10";
+        }
+
+        //Almacenar con SessionStorage
+        function crear(){
+            sessionStorage.setItem("usuario", "pedro");
+            sessionStorage.setItem("email", "pedro@gmail.com");
+        }
+
+        function mostrar(){
+            alert("Usuario: " + sessionStorage.getItem("usuario") + "\nCorreo: " + sessionStorage.getItem("email"));
+        }
+
+        function modificar(){
+            sessionStorage.setItem("usuario", "pedro5555");
+            sessionStorage.setItem("email", "pedro123@gmail.com");
+        }   
+
+        function eliminar(){
+            sessionStorage.removeItem("usuario");
+            sessionStorage.removeItem("email");
+        }
+
+        //Almacenar con LocalStorage
+        function crear(){
+            localStorage.setItem("usuario", "pedro");
+            localStorage.setItem("email", "pedro@gmail.com");
+        }
+
+        function mostrar(){
+            alert("Usuario: " + localStorage.getItem("usuario") + "\nCorreo: " + localStorage.getItem("email"));
+        }
+
+        function modificar(){
+            localStorage.setItem("usuario", "pedro5555");
+            localStorage.setItem("email", "pedro123@gmail.com");
+        }   
+
+        function eliminar(){
+            localStorage.removeItem("usuario");
+            localStorage.removeItem("email");
+        }
+    </script>
+
+</body>
+
+</html>
