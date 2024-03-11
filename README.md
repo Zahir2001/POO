@@ -1,2 +1,0 @@
-# POO
-Tareas, proyectos
