@@ -1,6 +1,4 @@
-Trabajos Realizados en POO - Zahir Alvarado
-
-
+Trabajos Realizados en POO - Zahir Imanol Alvarado Guerrero
 
 Integrantes del Proyecto Final POO:
 
